@@ -1,0 +1,101 @@
+body {
+    height: 100vh;
+    background-color: #ffd9e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    transform: rotateX(-10deg) rotateY(-10deg);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+#box .side {
+    width: 200px;
+    height: 200px;
+}
+
+#front {
+    position: absolute;
+    background-color: #f83976;
+    border: 1px solid black;
+    transform: translateZ(100px);
+    font: size 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#back {
+    position: absolute;
+    background-color: #f83976;
+    border: 1px solid black;
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+#bottom {
+    position: absolute;
+    background-color: #f83976;
+    border: 1px solid black;
+    transform: translateY(100px) rotateX(90deg);
+}
+
+#left {
+    position: absolute;
+    background-color: #ff76a2;
+    border: 1px solid black;
+    transform: translateX(-100px) rotateY(-90deg);
+}
+
+#right {
+    position: absolute;
+    background-color: #f83976;
+    border: 1px solid black;
+    transform: translateX(100px) rotateY(90deg);
+}
+
+#topleft{
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    transform: translateY(-100px) rotateX(-90deg);
+    width: 100px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+#topright{
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    transform: translateY(-100px) translateX(100px) rotateX(-90deg);
+    width: 100px;
+    height: 200px;
+    transition: 0.5s
+}
+
+#doll{
+    position: absolute ;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    transition: 2s;
+}
+
+@keyframes doll {
+    10%{transform: translateY(-200px);}
+    50%{transform: translateY(-200px) translateZ(800px);}
+    100%{transform: translateY(-200px) translatez(800px);}
+}
+
+@keyframes doll2 {
+    0%{transform: translateY(800px) translateY(-200px);}
+    20%{transform: translateY(-200px);}
+    60%{transform: translateY(0px) translatez(0px);}
+    100%{transform: translateY(0px) translatez(0px);}
+}
